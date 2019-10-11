@@ -1,0 +1,63 @@
+@font-face {
+    src: url(./assets/AFTERAIN.otf);
+    font-family: afterRain;
+}
+
+body {
+    background-color: #333;
+}
+
+h1 {
+    font-family: afterRain;
+    color: #333;
+    font-size: 10em;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.header{
+    background-color: white;
+}
+
+.dropdown-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+.currentTemp {
+    padding-top: 30px;
+    margin-bottom: -5px;
+    color: white;
+    text-align: center;
+}
+
+.weeklySumText, .weeklySumText2 {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    /* text-align: center; */
+    color: white;
+    flex-wrap: wrap
+}
+
+.weeklySumIcons, .weeklySumIcons2 {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#iconHolder {
+    text-align: center;
+}
+
+.currentDisplay {
+    font-size: 30px;
+}
+
+#eight {
+    color: white;
+    font-size: 30px;
+    padding-bottom: 30px;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>&lt;AFTERAIN /&gt;</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
+    <link ref="text/css" rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" style="font-family: afterRain">&lt;AR /&gt;</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Country
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <option class="dropdown-item" href="#" id="countrySelect" value="us">US</option>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        State
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="select">
+                        <option class="dropdown-item" id="stateOption">Alabama</option>
+                        <option class="dropdown-item" id="stateOption">Alaska</option>
+                        <option class="dropdown-item" id="stateOption" value="az">Arizona</option>
+                        <option class="dropdown-item" id="stateOption">Arkansas</option>
+                        <option class="dropdown-item" id="stateOption">California</option>
+                        <option class="dropdown-item" id="stateOption">Colorado</option>
+                        <option class="dropdown-item" id="stateOption">Connecticut</option>
+                        <option class="dropdown-item" id="stateOption">Delaware</option>
+                        <option class="dropdown-item" id="stateOption" value="fl">Florida</option>
+                        <option class="dropdown-item" id="stateOption">Georgia</option>
+                        <option class="dropdown-item" id="stateOption">Hawaii</option>
+                        <option class="dropdown-item" id="stateOption">Idaho</option>
+                        <option class="dropdown-item" id="stateOption">Illinois</option>
+                        <option class="dropdown-item" id="stateOption" value="in">Indiana</option>
+                        <option class="dropdown-item" id="stateOption">Iowa</option>
+                        <option class="dropdown-item" id="stateOption">Kansas</option>
+                        <option class="dropdown-item" id="stateOption">Kentucky</option>
+                        <option class="dropdown-item" id="stateOption">Louisiana</option>
+                        <option class="dropdown-item" id="stateOption">Maine</option>
+                        <option class="dropdown-item" id="stateOption">Maryland</option>
+                        <option class="dropdown-item" id="stateOption">Massachusetts</option>
+                        <option class="dropdown-item" id="stateOption">Michigan</option>
+                    </div>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="City" id="city" aria-label="Search">
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>&lt;AFTERAIN /&gt;</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12" id="iconHolder">
+                <div class="currentTemp">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <h1 id="eight">8 Day Forecast</h1>
+
+    <div class="weeklySumText">
+
+    </div>
+    <div class="weeklySumIcons">
+
+    </div>
+
+    <div class="weeklySumText2">
+
+    </div>
+    <div class="weeklySumIcons2">
+
+    </div>
+
+    <script src="script.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
+    <script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
