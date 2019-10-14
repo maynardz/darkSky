@@ -1,6 +1,6 @@
 // https://api.darksky.net/forecast/[key]/[latitude],[longitude]
 // api.zippopotam.us/country/state/city
-let zipBaseURL = 'http://api.zippopotam.us/'
+let zipBaseURL = 'https://api.zippopotam.us/'
 let weatherBaseURL = 'https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/'
 let zipURL;
 let weatherURL;
