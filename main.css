@@ -33,19 +33,19 @@ h1 {
 }
 
 .weeklySumText, .weeklySumText2 {
-    display: flex;
+    /* display: flex;
     justify-content: space-around;
     width: 100%;
-    /* text-align: center; */
+    text-align: center; */
     color: white;
-    flex-wrap: wrap
 }
 
 .weeklySumIcons, .weeklySumIcons2 {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 #iconHolder {

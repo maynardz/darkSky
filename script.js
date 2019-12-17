@@ -13,6 +13,14 @@ let stateValue;
 
 const countrySelect = document.getElementById('countrySelect');
 const stateSelect = document.querySelectorAll('#stateOption');
+const cityInput = document.getElementById('city')
+const searchForm = document.querySelector('form');
+const currentTempDiv = document.querySelector('.currentTemp');
+const weeklySumText = document.querySelector('.weeklySumText');
+const weeklySumText2 = document.querySelector('.weeklySumText2');
+const weeklySumIcons = document.querySelector('.weeklySumIcons');
+const weeklySumIcons2 = document.querySelector('.weeklySumIcons2');
+const iconHolder = document.getElementById('iconHolder');
 const weekForecastText = document.getElementById('eight');
 weekForecastText.style.display = 'none';
 
@@ -27,9 +35,6 @@ let icons = new Skycons({
     "color": "white"
 });
 
-const cityInput = document.getElementById('city')
-const searchForm = document.querySelector('form');
-const currentTempDiv = document.querySelector('.currentTemp');
 
 searchForm.addEventListener('submit', fetchPlace);
 
@@ -64,11 +69,23 @@ let getWeather = () => {
 let displayWeather = (json) => {
     console.log(json)
 
+    while(currentTempDiv.firstChild) {
+        currentTempDiv.removeChild(currentTempDiv.firstChild);
+    }
+
+    while(weeklySumText.firstChild) {
+        weeklySumText.removeChild(weeklySumText.firstChild);
+    }
+
+    while(weeklySumText2.firstChild) {
+        weeklySumText2.removeChild(weeklySumText2.firstChild);
+    }
+
     // CURRENT
     // set icons
     let skycon = json.currently.icon;
+
     let canvasEl = document.createElement('canvas');
-    let iconHolder = document.getElementById('iconHolder');
 
     canvasEl.setAttribute('id', skycon);
     canvasEl.setAttribute('height', 100);
@@ -109,20 +126,29 @@ let displayWeather = (json) => {
 
     // WEEKLY
     let weekly = json.daily.data;
-    let weeklySumText = document.querySelector('.weeklySumText');
-    let weeklySumText2 = document.querySelector('.weeklySumText2');
-    let weeklySumIcons = document.querySelector('.weeklySumIcons');
-    let weeklySumIcons2 = document.querySelector('.weeklySumIcons2');
+
     weekForecastText.style.display = 'block';
 
     weekly.forEach((day, i) => {
         let skycon = day.icon;
         // console.log(skycon);
 
+        let date = document.createElement('h4');
         let summary = document.createElement('p');
         let canvasEl = document.createElement('canvas');
+        let temp = document.createElement('p');
 
+        let tempLow = day.temperatureLow;
+        let tempHigh = day.temperatureHigh;
+
+        let timestamp = day.time;
+        let pullDate = new Date(timestamp*1000);
+        let dateString = pullDate.toString();
+        let sliced = dateString.slice(0, 10);
+
+        date.textContent = sliced;
         summary.textContent = day.summary;
+        temp.textContent = `High: ${tempHigh} - Low: ${tempLow}`
 
         canvasEl.setAttribute('id', skycon);
         canvasEl.setAttribute('height', 100);
@@ -131,14 +157,21 @@ let displayWeather = (json) => {
         icons.add(canvasEl, skycon);
 
         if (i <= 3){
-            weeklySumText.appendChild(summary);
+            weeklySumText.appendChild(date);
             weeklySumIcons.appendChild(canvasEl);
+            weeklySumText.appendChild(summary);
+            weeklySumText.appendChild(temp);
+
         } else {
-            weeklySumText2.appendChild(summary);
+            weeklySumText2.appendChild(date);
             weeklySumIcons2.appendChild(canvasEl);
+            weeklySumText2.appendChild(summary);
+            weeklySumText2.appendChild(temp);
         }
 
-
+        // let date = Date()
+        // date.toString();
+        // console.log(date)
         icons.play();
     })
 
